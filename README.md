@@ -11,6 +11,7 @@ Output:simMatrix-$suffixname.txt is a similarity matrix of drugs
        clu-$suffxiname.pdf is a hierachcial clustering of drugs base on simMatrix-$suffixname.txt.
 
 Requirement
+
 1.Installation for Perl (v5.24.1 and above version)
 https://www.activestate.com/products/perl/downloads/
 
