@@ -1,20 +1,20 @@
 #Programmed by guofeifei 2018.1.11,updated in 2021.6.10
 #get drug-target relation and target-pathway/GO relation of different drugs
-#usage:perl extarctRelation.pl test 9 wiki
+#usage:perl extracRelation.pl $suffix $randtime $pathdb  
+#eg., perl extracRelation.pl test 9 wiki
 ###Requirement###
-#input file: 1. combine_score.txt  2.pathway data,include goa_human.gaf, 
-#OUTPUT:simMatrix-$suffix.txt#similar matrix between drugs based on pathway fingerprints
+#input file: 1. combine_score.tsv  2.pathway data,include goa_human.gaf, 
+#OUTPUT:simMatrix-$suffix.tsv#similar matrix between drugs based on pathway fingerprints
 ########clu-$suffix.pdf#hierarchical cluster of drug based on similar Matrix
 use strict;
-use Data::Dump qw(dump);
 use List::Util qw(shuffle sum);
 
-my $suffix=shift;#optional
+my $suffix=shift;#eg., test
 my $randtime=shift;#larger than 2
 my $pathdb=shift; # please choose one of three from GO,wiki,reactome
 
 #read drug-target relation
-open(IN,"combine_score.txt") or die;
+open(IN,"combine_score.tsv") or die;
 my $head=<IN>;
 my $pt_relation;
 my $pt_node;
@@ -103,7 +103,7 @@ for my $rand(0..($randtime-1)){
 }
 
 
-open(OUT,">simMatrix-$suffix.txt") or die;
+open(OUT,">simMatrix-$suffix.tsv") or die;
 print OUT "\t".join("\t",sort keys %{$pt_node->{'drug'}})."\n";
 foreach my $drug1(sort keys %{$pt_node->{'drug'}}){
 	print OUT "$drug1\t";
@@ -115,8 +115,8 @@ foreach my $drug1(sort keys %{$pt_node->{'drug'}}){
 	print OUT "\n";
 }
 close OUT;
-print "Rscript hclu.r simMatrix-$suffix.txt clu-$suffix.pdf\n";
-system("Rscript hclu.r simMatrix-$suffix.txt clu-$suffix.pdf");
+print "Rscript hclu.r simMatrix-$suffix.tsv clu-$suffix.pdf\n";
+system("Rscript hclu.r simMatrix-$suffix.tsv clu-$suffix.pdf");
 
 sub printrelation($pt_relation,$pt_node){
 	my $pt_relation=shift;

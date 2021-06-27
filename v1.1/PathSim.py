@@ -1,6 +1,6 @@
 #usage: python Pathsim.py $drugnum
-#inputfile： inputfiles were produced by extracRelation.pl, including drug.txt target.txt relation.txt term.txt
-#outputfile: result.txt
+#input: inputfiles were produced by extracRelation.pl, including drug.txt target.txt relation.txt term.txt
+#output: result.txt
 
 import pandas as pd
 import numpy as np
