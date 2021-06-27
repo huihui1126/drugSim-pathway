@@ -3,7 +3,7 @@
 #usage:perl extracRelation.pl $suffix $randtime $pathdb  
 #eg., perl extracRelation.pl test 9 wiki
 ###Requirement###
-#input file: 1. combine_score.tsv  2.pathway data,include goa_human.gaf, 
+#input file: 1. combine_score.tsv  2.pathway data,include goa_human.gaf, http://current.geneontology.org/annotations/goa_human.gaf.gz
 #OUTPUT:simMatrix-$suffix.tsv#similar matrix between drugs based on pathway fingerprints
 ########clu-$suffix.pdf#hierarchical cluster of drug based on similar Matrix
 use strict;
