@@ -5,13 +5,16 @@ This programme is written by Feiei Guo(ffguo@icmm.ac.cn).
 
 The main programe is extracRelation.pl, which call the pathsim.py and hclu.r for calculation for two drug similarity based on pathway, and hierachical clustering based on drug similarity matrix.
 
-Usage: Perl extracRelation.pl combine_score.txt $suffixname eg., Perl extracRelation.pl combine_score.txt test
+Usage: 
+       
+       Perl extracRelation.pl combine_score.txt $suffixname 
+       eg., Perl extracRelation.pl combine_score.txt test
 
 Input: Combine_score.txt is a file including drug-target interaction. The first three columns (Drug, Target, Combine_score) are required.
 
-Output:simMatrix-$suffixname.txt is a similarity matrix of drugs
+Output1: simMatrix-$suffixname.txt is a similarity matrix of drugs
 
-       clu-$suffxiname.pdf is a hierachcial clustering of drugs base on simMatrix-$suffixname.txt.
+Output2: clu-$suffxiname.pdf is a hierachcial clustering of drugs base on simMatrix-$suffixname.txt.
 
 Requirement
 
