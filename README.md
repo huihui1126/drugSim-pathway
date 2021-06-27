@@ -7,8 +7,8 @@ The main programe is extracRelation.pl, which call the pathsim.py and hclu.r for
 
 Usage: 
        
-       Perl extracRelation.pl combine_score.txt $suffixname 
-       eg., Perl extracRelation.pl combine_score.txt test
+       Perl extracRelation.pl $suffixname $randtime $pathdb
+       eg., Perl extracRelation.pl test 10 GO
 
 Input: Combine_score.txt is a file including drug-target interaction. The first three columns (Drug, Target, Combine_score) are required.
 
