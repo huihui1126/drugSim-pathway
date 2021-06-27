@@ -16,12 +16,14 @@ Requirement
 https://www.activestate.com/products/perl/downloads/
 
 Perl package
+
 List::Util
 
 2.Installation for python (v3.6.4 and above version)
 https://www.python.org/downloads/
 
 Python packages
+
 pandas
 numpy
 sys
@@ -30,4 +32,5 @@ sys
 https://cran.r-project.org/bin/windows/base/
 
 R package
+
 ape
