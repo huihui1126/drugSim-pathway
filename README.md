@@ -1,5 +1,5 @@
 # drugSim-pathway
-Drug similarity evaluation based on pathway fingerprints.
+Drug similarity evaluation based on pathway fingerprints. We proposed an approach using pathway fingerprint similarity based on a “drug-target-pathway” heterogeneous network to explore the mechanisms of natural drugs XYPI using NSAIDs and GCs as reference agents. A heterogeneous network similarity algorithm used for social networks was applied to investigate the pathway fingerprint similarity between drugs in the heterogeneous "drug-target-pathway" network and to predict the drug-pathway associations of XYPI.
 
 This programme is written by Feiei Guo(ffguo@icmm.ac.cn).
 
