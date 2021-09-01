@@ -1,5 +1,5 @@
 # drugSim-pathway
-Drug similarity evaluation based on pathway fingerprints
+Drug similarity evaluation based on pathway fingerprints.
 
 This programme is written by Feiei Guo(ffguo@icmm.ac.cn).
 
@@ -10,11 +10,11 @@ Usage:
        Perl extracRelation.pl $suffixname $randtime $pathdb
        eg., Perl extracRelation.pl test 10 GO
 
-Input: Combine_score.txt is a file including drug-target interaction. The first three columns (Drug, Target, Combine_score) are required.
+Input: Combine_score.txt is a file including drug-target interaction of XYPI, Glucocorticoids (GCs) and Nonsteroidal Anti-inflammatory Drugs (NSAIDs). The first three columns (Drug, Target, Combine_score) are required.
 
-Output1: simMatrix-$suffixname.txt is a similarity matrix of drugs
+Output1: simMatrix-$suffixname.txt is a similarity matrix of drugs,including XYPI, GCs and NSAIDs.
 
-Output2: clu-$suffxiname.pdf is a hierachcial clustering of drugs base on simMatrix-$suffixname.txt.
+Output2: clu-$suffxiname.pdf is a hierachcial clustering of drugs(XYPI, GCs and NSAIDs) base on simMatrix-$suffixname.txt.
 
 Requirement
 
